@@ -1,13 +1,13 @@
 {% set name = "bioat" %}
-{% set version = "0.12.15" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "0.13.0"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-{{ version }}.tar.gz
-  sha256: 56b904bc4460125172b3a4ede96631cf1a3e39ac23b7ee8b0a65677b40745b2a
+  sha256: "d6be4457ec73fda7471191ce00d604fd749081fd7193334dcfd15aa4c4211396"
 
 build:
   entry_points:
@@ -36,12 +36,13 @@ requirements:
     - psutil >=5.9.8
     - openpyxl >=3.1.2
     - matplotlib-inline >=0.1.7
-  run_constrained:
-    - scikit-learn >=1.0.2
-    - scipy >=1.7.3
+    - bamnostic >=1.1.10
     - beautifulsoup4 >=4.12.3
     - playwright >=1.19.0
     - selenium >=4.1.3
+  run_constrained:
+    - scikit-learn >=1.0.2
+    - scipy >=1.7.3
 
 test:
   imports:
