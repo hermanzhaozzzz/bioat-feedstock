@@ -1,13 +1,13 @@
 {% set name = "bioat" %}
-{% set version = "0.13.1" %}
+{% set version = "0.13.2" %}
 
 package:
   name: {{ name|lower }}
-  version: "0.13.1"
+  version: "0.13.2"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-{{ version }}.tar.gz
-  sha256: "bfb06bc2f287f58695155746490ba0442954d2857798ff0a8a573db2e26be4be"
+  sha256: "b9e9d6e334472f1be3d75b6545c753d248954b99f7478d0f415431254ec38abf"
 
 build:
   entry_points:
@@ -41,6 +41,7 @@ requirements:
     - selenium >=4.1.3
     - scikit-learn >=1.0.2
     - scipy >=1.7.3
+    - seaborn >=0.13.2,<0.14.0
 
 test:
   imports:
