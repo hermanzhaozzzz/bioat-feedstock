@@ -3,7 +3,7 @@
 
 package:
   name: {{ name|lower }}
-  version: "0.13.3"
+  version: "0.13.4"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-{{ version }}.tar.gz
@@ -28,7 +28,7 @@ requirements:
     - tqdm >=4.64.1
     - fire >=0.5.0
     - biopython >=1.80
-    - matplotlib-base >=3.7.1
+    - matplotlib-base >=3.5.3
     - tabulate >=0.9.0
     - statsmodels >=0.13.5
     - requests >=2.31.0
