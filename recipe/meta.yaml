@@ -1,3 +1,4 @@
+{% set python_min = '3.10.0' %}
 {% set name = "bioat" %}
 {% set version = "0.13.5" %}
 
@@ -14,15 +15,15 @@ build:
     - bioat = bioat.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10,<3.13
+    - python {{ python_min }}
     - poetry-core >=1.5.0
     - pip
   run:
-    - python >=3.10.0,<3.13.0
+    - python >={{ python_min }},<3.13.0
     - pandas >=1.5
     - numpy >=1.24.1
     - tqdm >=4.64.1
@@ -50,6 +51,7 @@ test:
     - bioat --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/hermanzhaozzzz/bioat
