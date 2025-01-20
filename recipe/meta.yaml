@@ -1,29 +1,28 @@
-{% set python_min = '3.10.0' %}
 {% set name = "bioat" %}
-{% set version = "0.13.5" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
-  version: "0.13.5"
+  version: "0.14.0"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-{{ version }}.tar.gz
-  sha256: "11ba126a2af5001d9b17df8da4922a4b2ddcbe56977afa532c87670b3e9ee605"
+  sha256: "4a8190c09f63a51cf50a7b2e7bfd1a2ead53d7b98990533dec6e390823f995a3"
 
 build:
   entry_points:
     - bioat = bioat.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
-    - python {{ python_min }}
-    - poetry-core >=1.5.0
+    - python >=3.10,<3.13
+    - poetry-core
     - pip
   run:
-    - python >={{ python_min }},<3.13.0
+    - python >=3.10.0,<3.13.0
     - pandas >=1.5
     - numpy >=1.24.1
     - tqdm >=4.64.1
@@ -41,7 +40,8 @@ requirements:
     - selenium >=4.1.3
     - scikit-learn >=1.0.2
     - scipy >=1.7.3
-    - seaborn >=0.13.2,<0.14.0
+    - seaborn >=0.13.2
+    - py3dmol >=2.4.2
 
 test:
   imports:
@@ -51,7 +51,6 @@ test:
     - bioat --help
   requires:
     - pip
-    - python {{ python_min }}
 
 about:
   home: https://github.com/hermanzhaozzzz/bioat
