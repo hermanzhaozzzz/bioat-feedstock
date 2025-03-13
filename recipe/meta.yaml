@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-0.14.3a0.tar.gz
-  sha256: "6ae9c21bb0a763d1a53602eb6c6b5b3d34dc196378f1cbe884b7bd801151"
+  sha256: "b53a7f49b11e8b6f626f91b0f6b5b847df0dbf065cc24232939677e2f4cea357"
 
 build:
   entry_points:
