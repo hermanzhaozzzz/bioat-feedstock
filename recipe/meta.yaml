@@ -1,13 +1,13 @@
 {% set name = "bioat" %}
-{% set version = "0.14.2" %}
+{% set version = "0.14.5" %}
 
 package:
   name: {{ name|lower }}
-  version: "0.14.2"
+  version: "0.14.5"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-{{ version }}.tar.gz
-  sha256: "0ded0091b046e329654ff2632ed3261713b26dd91e410a9bbcee548fa1e8f2f8"
+  sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 build:
   entry_points:
@@ -42,6 +42,8 @@ requirements:
     - scipy >=1.7.3
     - seaborn >=0.13.2
     - py3dmol >=2.4.2
+    - ipykernel >=6.0.0
+    - ipython <9.0.0
 
 test:
   imports:
