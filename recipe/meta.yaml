@@ -6,8 +6,8 @@ package:
   version: "0.14.3"
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-{{ version }}.tar.gz
-  sha256: "c2928f06261c77737334b5f15d23353766d35aa7527b39094fa90842c7ef44ba"
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-0.14.3a0.tar.gz
+  sha256: "6ae9c21bb0a763d1a53602eb6c6b5b3d34dc196378f1cbe884b7bd801151"
 
 build:
   entry_points:
@@ -42,7 +42,8 @@ requirements:
     - scipy >=1.7.3
     - seaborn >=0.13.2
     - py3dmol >=2.4.2
-    - ipykernel >=6.29.5,<7.0.0
+    - ipykernel >=6.0.0
+    - ipython <9.0.0
 
 test:
   imports:
