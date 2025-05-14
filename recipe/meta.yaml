@@ -1,5 +1,5 @@
 {% set name = "bioat" %}
-{% set version = "0.15.1" %}
+{% set version = "0.15.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-{{ version }}.tar.gz
-  sha256: "532f64bd1dfc050455965b1d383512547db51d505507d3411af3d3b7149493df"
+  sha256: "1fdf1d7ac0e77b8d03be1314eef0b5c5edbb72251cb8eaff466c1ec90049a49c"
 
 build:
   entry_points:
