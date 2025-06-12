@@ -1,13 +1,13 @@
 {% set name = "bioat" %}
-{% set version = "0.15.2" %}
+{% set version = "0.15.3" %}
 
 package:
   name: {{ name|lower }}
-  version: "0.15.1"
+  version: "0.15.3a"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-{{ version }}.tar.gz
-  sha256: "1fdf1d7ac0e77b8d03be1314eef0b5c5edbb72251cb8eaff466c1ec90049a49c"
+  sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 build:
   entry_points:
@@ -44,6 +44,7 @@ requirements:
     - py3dmol >=2.4.2
     - ipykernel >=6.0.0
     - ipython <9.0.0
+    - json-log-formatter >=1.1.1,<2.0.0
 
 test:
   imports:
