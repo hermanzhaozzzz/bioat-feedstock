@@ -44,7 +44,6 @@ requirements:
     - py3dmol >=2.4.2
     - ipykernel >=6.0.0
     - ipython <9.0.0
-    
 
 test:
   imports:
